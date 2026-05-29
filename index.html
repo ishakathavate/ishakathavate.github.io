@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Isha Kathavate</title>
+  <link rel="icon" type="image/x-icon" href="/isha_files/favicon.png">
+  <link href="isha_files/w3.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Tangerine">
+  <style>
+    body {
+      font-family: "Lato", sans-serif;
+      background-color: black;
+    }
+
+    section {
+      min-height: 100%;
+    }
+
+    .mySlides {
+      display: none
+    }
+
+    .mySlides1 {
+      display: none
+    }
+
+    #hideme1 {
+      width: 100%;
+      height: auto;
+      display: none;
+    }
+
+    #hideme2 {
+      width: 100%;
+      height: auto;
+      display: none;
+    }
+
+    #hideme3 {
+      width: 100%;
+      height: auto;
+      display: none;
+    }
+
+    #hideme4 {
+      width: 100%;
+      height: auto;
+      display: none;
+    }
+
+    .w3-tangerine {
+      font-family: 'Tangerine';
+      background: -webkit-linear-gradient(#08F0C7, #0030F3);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    @media all and (min-width: 800px) {
+      .w3-tangerine {
+        font-size: 70px;
+      }
+
+      .slide1 {
+        font-size: 30px;
+        margin-left: -15%;
+        color: #E1B84E;
+      }
+
+      .slide2 {
+        font-size: 30px;
+        margin-left: 10%;
+        color: #E1B84E;
+      }
+
+      .slide3 {
+        font-size: 30px;
+        margin-left: -15%;
+        color: #E1B84E;
+      }
+    }
+
+    @media screen and (max-width : 800px) {
+      .w3-navbar li {
+        float: none;
+      }
+
+      .w3-tangerine {
+        font-size: 42px;
+        padding: 13px 0 0 5px;
+        line-height: 1;
+        margin-bottom: -10px;
+      }
+
+      .slide1 {
+        font-size: 8px;
+        margin-left: -20%;
+        margin-top: -30%;
+        color: #E1B84E;
+      }
+
+      .slide2 {
+        font-size: 8px;
+        margin-left: 5%;
+        margin-top: -30%;
+        color: #E1B84E;
+      }
+
+      .slide3 {
+        font-size: 8px;
+      }
+    }
+
+    @font-face {
+      font-family: "Nirmala UI";
+      src: url("./isha_files/Nirmala.ttf");
+    }
+
+    .sankrit {
+      font-family: "Nirmala UI";
+    }
+
+    #logo {
+      float: left;
+      width: 160px
+    }
+
+    #nav {
+      background-color: black;
+      width: 100%;
+      height: 66px;
+      top: 0px;
+    }
+
+    .title {
+      display: none;
+      color: #EDEDED;
+      font-family: verdana;
+      font-size: 25px;
+      width: 350px;
+      margin-top: 6px;
+      margin-left: 150px;
+      font-weight: bold;
+      float: left;
+    }
+
+
+    #navigation {
+      list-style-type: none;
+    }
+
+
+    li {
+
+      display: inline;
+      padding: 15px;
+    }
+
+    .crop-container {
+      height: 150px;
+      overflow: hidden;
+      margin-bottom: 15px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 100px;
+      padding: 12px 20px;
+      box-sizing: border-box;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+
+      font-size: 16px;
+      resize: none;
+    }
+
+    .bw {
+      background-color: #ddd;
+      color: black;
+    }
+
+    #image {
+      margin-top: 10px;
+      /* box-shadow: 5px 5px 5px 5px gray; */
+      width: 60px;
+      font-weight: 400;
+      padding-bottom: 0px;
+      height: 40px;
+      user-select: none;
+      text-decoration: line-through;
+      font-style: italic;
+      font-size: x-large;
+      border: red 2px solid;
+      margin-left: 10px;
+
+    }
+
+    #user-input {
+      /* box-shadow: 5px 5px 5px 5px gray; */
+      width: auto;
+      margin-right: 10px;
+      padding: 10px;
+      padding-bottom: 0px;
+      height: 40px;
+      border: red 0px solid;
+    }
+
+    input {
+      border: 1px black solid;
+    }
+
+    .inline {
+      display: inline-block;
+    }
+
+    #btn {
+      /* box-shadow: 5px 5px 5px grey;  */
+      margin-left: 20px;
+    }
+
+    .whatsapp-button {
+      background-color: #25D366;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-family: sans-serif;
+    }
+
+    #empty {
+      background: url(isha_files/logo-out1.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+      overflow: hidden;
+      position: relative;
+      height: 800px;
+      filter: brightness(200%)
+    }
+
+    #watermark {
+      background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(isha_files/logo-out1.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+      overflow: hidden;
+      position: relative;
+    }
+
+    @media (max-width: 768px) {
+      #watermark {
+        background-size: 100vw;
+      }
+
+      #empty {
+        min-height: auto;
+        background-size: 100vw;
+
+      }
+    }
+
+
+    #sacred-h3 {
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+
+    #sacred {
+      position: absolute;
+      top: 25%;
+
+      /* transform: translate(-50%, -50%); */
+    }
+
+
+    #scroll-to-top {
+      /* Position the button fixed in the viewport */
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 99;
+      /* Ensure it's on top of other content */
+
+      /* Initially hide the button */
+      display: none;
+
+      /* Style the button */
+      border: none;
+      background-color: #333;
+      /* color: #fff; */
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      font-size: 24px;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      transition: opacity 0.3s, visibility 0.3s;
+    }
+	.w3-animate-fading {
+		animation-duration: 6s !important;
+	}
+  </style>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+    integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+  <script src="captcha.js"></script>
+  <script>
+    function onSubmit() {
+      console.log("Clicked on Submit button")
+      document.getElementById("myForm").submit()
+    }
+
+  </script>
+
+</head>
+
+<body onload="generate()" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+  <!-- 
+<div class="w3-top w3-black">
+
+<ul class="w3-navbar w3-black w3-card-2 w3-left" >	
+  <li><a href="index.html" class="w3-tangerine w3-hover-none w3-hover-text-grey  "><img style="top:0;left:0;" height="20%" src="isha_files/logo1.png" id="logo" />Isha Kathavate</a></li>
+</ul>
+<ul class="w3-navbar w3-black w3-card-2 w3-right">
+  <li class="w3-hide-large w3-opennav w3-right">
+    <a class="w3-padding-large" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+  </li>
+ <li class=" w3-hide-medium w3-hide-small"><a href="#about" class="w3-padding-large">ABOUT</a></li>
+ <li class=" w3-hide-medium w3-hide-small"><a href="#ishalaya" class="w3-padding-large">ABOUT ISHALAYA</a></li>
+  <li class=" w3-hide-medium w3-hide-small"><a href="#gallery" class="w3-padding-large">GALLERY</a></li>
+  <li class=" w3-hide-medium w3-hide-small"><a href="#contact" class=" w3-padding-large">CONTACT</a></li>
+
+ <li class="w3-hide-small w3-dropdown-hover" style="margin-right:50px;">
+    <a href="javascript:void(0)" class="w3-hover-none w3-padding-large" title="More">MORE <i class="fa fa-caret-down"></i></a>
+    <div class="w3-dropdown-content w3-white w3-card-4">
+      <a href="#">EVENTS</a>
+      <a href="#">PRESS RELEASE</a>
+      
+    </div>
+  </li> 
+</ul>
+</div> -->
+  <a id="top"></a>
+  <div id='nav'>
+    <a href="index.html"><img src="isha_files/logo-out1.png" id="logo" /></a>
+    <span class="w3-tangerine w3-hover-none">Isha Kathavate</span>
+    <ul class="w3-navbar w3-black w3-card-2 w3-right">
+      <li class="w3-hide-large w3-opennav w3-right">
+        <a class="w3-padding-large" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i
+            class="fa fa-bars"></i></a>
+      </li>
+      <li class=" w3-hide-medium w3-hide-small"><a href="#about" class="w3-padding-large">ABOUT THE ARTIST</a></li>
+      <li class=" w3-hide-medium w3-hide-small"><a href="#ishalaya" class="w3-padding-large">ABOUT INSTITUTE</a></li>
+      <li class=" w3-hide-medium w3-hide-small"><a href="#choreography" class="w3-padding-large">CHOREOGRAPHIES</a></li>
+      <li class=" w3-hide-medium w3-hide-small"><a href="#contact" class=" w3-padding-large">CONTACT US</a></li>
+
+      <!-- <li class="w3-hide-small w3-dropdown-hover" style="margin-right:50px;">
+        <a href="javascript:void(0)" class="w3-hover-none w3-padding-large w3-hide-medium" title="More">MORE <i
+            class="fa fa-caret-down"></i></a>
+        <div class="w3-dropdown-content w3-white w3-card-4">
+          <a href="#press">PRESS RELEASE</a>
+          <a href="#events">EVENTS</a>
+        </div>
+      </li> -->
+    </ul>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-left w3-hide w3-hide-large w3-top" style="width:90%">
+    <ul class="w3-navbar w3-card w3-left-align w3-black">
+      <li><a class="w3-padding-large" href="#about" onclick="myFunction()">ABOUT THE ARTIST</a></li>
+      <li><a class="w3-padding-large" href="#ishalaya" onclick="myFunction()">ABOUT INSTITUTE</a></li>
+      <li><a class="w3-padding-large" href="#choreography" onclick="myFunction()">CHOREOGRAPHIES</a></li>
+      <li><a class="w3-padding-large" href="#contact" onclick="myFunction()">CONTACT US</a></li>
+    </ul>
+  </div>
+
+  <a href="#top" id="scroll-to-top" title="Go to top">
+    <button>&uarr;</button>
+  </a>
+
+  <!-- Page content -->
+  <div class="w3-content w3-black" style="max-width:1800px;margin-top:46px">
+
+    <!-- Automatic Slideshow Images -->
+    <div class="mySlides w3-animate-fading">
+      <img src="images/1ONE1200X700.png" style="width:100%">
+      <div class=" w3-display-middle w3-container w3-padding-32">
+        <h3></h3>
+        <p class="slide1"><b></b></p>
+      </div>
+    </div>
+    <div class="mySlides w3-animate-fading">
+      <img src="images/2TWO1200X700.png" style="width:100%">
+      <div class="slide2 w3-display-middle w3-container w3-padding-32">
+        <h3></h3>
+        <p><b></b></p>
+      </div>
+    </div>
+    <div class="mySlides w3-animate-fading">
+      <img src="images/3THREE1200X700.png" style="width:100%">
+      <div class="slide3 w3-display-middle w3-container w3-padding-32">
+        <h3></h3>
+        <p><b></b></p>
+      </div>
+    </div>
+    <div class="mySlides w3-animate-fading">
+      <img src="images/4FOUR1200X700.png" style="width:100%">
+      <div class="slide3 w3-display-middle w3-container w3-padding-32">
+        <h3></h3>
+        <p><b></b></p>
+      </div>
+    </div>
+
+    <div id="about" class="w3-content w3-container w3-padding-64">
+    <div class="w3-content w3-container w3-padding-64">
+      <h3 class="w3-center">ABOUT THE ARTIST</h3>
+      <div class="w3-row">
+        <div class="w3-col m6 w3-center w3-section">
+          <br>
+          <img src="images/about.png" style="max-width:335px;" alt="Photo of Me">
+        </div>
+
+        <!-- Hide this text on small devices -->
+        <div class="w3-col m6 w3-section">
+          <p class="w3-justify">A versatile artiste, Isha is performing, teaching, choreographing, compering and writing on dance related topics. For the past more than 20 years she has been under the tutelage of Kathak exponent Pandita Guru Maneesha Sathe,a torchbearer of Padmashree Pt Gopi Krishnaji's style of Kathak.</p>
+          <p class="w3-justify">Blessed to have been tutored since 8 years of age by renowned Kathak exponent Pta. Guru Maneesha Sathe, Isha Kathavate has performed at various prestigious festivals across India as a prominent member of Maneesha Nrityalaya’s Performing Unit.</p>
+          <p class="w3-justify">A Commerce graduate, she pursued M. A in Kathak from Tilak Maharashtra Vidyapeeth and is a Nritya Alankar from ABGMV.</p>
+          <p class="w3-justify">A recipient of Singarmani award, the Pandit Vishnu Digambar Paluskar award, she has acquired Grade 'A' Artist by Doordarshan, Mumbai.</p>
+          <p class="w3-justify">She was awarded a junior research fellowship by CCRT-Centre for Cultural Resources and Training (under the aegis of ministry of Culture, Govt. of India). Her thesis on ‘The Changing Trends in Kathak Choreography and their Challenges’ was approved under this Fellowship. She was selected to give Paper presentations on this subject twice at Sarangadeva Pravaha by Mahagami Aurangabad, International Research Seminar at D Y. Patil University Pimpri, ‘Srajan’ organised by Kalashram and Guru Renu Sharmaji’s Alpika, Mumbai. </p>
+			</div>
+			<div class="w3-row w3-center">
+		 <p class="w3-justify">As a soloist, Isha has performed at various prestigious platforms like, the Kinkini Festival- Mumbai, Haridas Sangeet Samaroha -Mumbai, Sri Sumukhi Rajshekharan foundation- Chennai, Cuttak dance festival, Girnar festival- junagad, Nalanda Nrityotsav- Mumbai, to name a few.</p>
+          <p class="w3-justify">As a choreographer, Isha has touched upon varied subjects from traditional to contemporary like ‘Emergence…where fear ends’, ‘Spanda :the meditative pulse’, ‘Inspiration’ to name a few. Doordarshan Prasar Bharati, Delhi selected and recorded 3 of her traditional choreographies for the ABU, AIDF Festival. She has also published a solo choreographic video production based on Lang Leav’s poetry ‘The Rose’ on her Youtube channel.</p>
+          <p class="w3-justify">She is founder of Ishalaya School of Kathak Pune and Mumbai, which has successfully completed 20 years and has ventured into curation of a Baithak series ‘Rasik Rendezvous’ in Mumbai. </p>
+
+        </div>
+      </div>
+      </div>
+	   <div class="w3-content w3-container w3-padding-64">
+      <div class="w3-row w3-center">
+        <h4 style="font-weight:bold;">Achievements</h4>
+        <div class="w3-col m12 w3-section">
+          <ul class="w3-ul w3-center w3-hoverable" style="display:inline-flex;">
+            <li>M .A. with first class from Tilak Maharashtra Vidyapeeth.</li>
+            <li>"Nritya Alankar" from Gandharva Mahavidyalay, Pune.</li>
+            <li>"Nritya Visharad" from Gandharva Mahavidyalay, Pune.</li>
+            <li>Recepient of the Pt. V. Digambar Paluskar Award 2003.</li>
+            <li>Recepient of the "Singarmani" title 2008 by the Sur Singar Sansad, Mumbai.</li>
+            <li>Junior Fellowship Award by the CCRT, Ministry of Culture, Govt. Of India.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="w3-row w3-center">
+        <div class="w3-col m12 w3-section">
+          <h4 style="font-weight:bold;">Performances</h4>
+          <p>As a prominnet member of Maneesha Nrityalaya's performing unit Isha has performed at major Dance and music
+            festivals like Kala Ghodafestival,Mumbai;Shaniwarwada Dance and Music festival,Pune; Vasantotsav, Delhi;
+            Khajuraho Festival, Lucknow Ka Sansthan Festival, Kamakhya festival, Assam ; Elephanta Festival Mumbai
+            ;World Peace Art Festival, Pune and Bodhgaya.</p>
+
+        </div>
+      </div>
+      <div class="w3-row w3-left">
+        <div class="w3-col m6 w3-section" style="padding-right:5px;">
+
+
+          <h4 style="font-weight:bold;">Solos</h4>
+          <p>Nalanda Nrityotsav, 2017</p>
+          <p>Kinkini festival, Mumbai</p>
+          <p>Cuttack Dance festival</p>
+          <p>Sri sumukhi Rajashekharan foundation's festival, Chennai,</p>
+          <p>Haridas Sangeet Festival, Mumbai</p>
+          <p>Performed with troupe at Tolani Maritime Institute.</p>
+          <p>A series of solo performances in "Celebrate Bandra", 2009 a community festival in Mumbai at 4 different
+            venues in Bandra.</p>
+          <p>Performed "Rhythm meets Melody", a programme based on the Abhinaya aspect of Kathak in a jugalbandi form
+            with noted Hindustani vocapst Dr. Sandhya Kathavate.</p>
+          <p>Bangiya sanskritik Sansad's Basant Utsav, Pune</p>
+          <p>76th Greater Pune Sarbijanin Durgotsav 2015,Congress Bhavan, Pune</p>
+          <p>Girinar Festival, Junagad,</p>
+          <p>Nritya Sabha by dr. Suchitra Date, Pune</p>
+
+        </div>
+        <div class="w3-col m6 w3-section" style="padding-left:5px;">
+          <h4 style="font-weight:bold;">Doordarshan</h4>
+          <p>Grade 'A' Artist by Doordarshan</p>
+          <p>Participated in Study Films for "EMRC" for Kathak.</p>
+          <p>Participated in Musical Drama for "Sahyadri TV Channel".</p>
+          <p>Performed at Sahyadri Navratna Puraskar (Doordarshan).</p>
+          <p>Performed at Sahyadri Hirkani Awards (Doordarshan).</p>
+          <p>Very recently 3 choreographies were recorded by Doordarshan Prasar Bharati, Delhi for ABU screening of AIDF
+            Festival -2016.</p>
+
+
+          <p>Performs with her troupe at various Corporate events.</p>
+
+          <p>Ishalaya's own productions are Kathak Vilas, Rhythm meets melody, Kathak- Tradition to Transition.</p>
+
+          <!-- <h4 style="font-weight:bold;">Compere</h4>
+<p>Compered in Hindi  for Education Films for "FTII" (Pune)</p>
+<p>Comperes in English at prestigious Dance concerts.</p>
+<p>Performed French Skits for "IATF Congress".</p> -->
+          <p>Isha has had the opportunity of compering in English and Hindi for various dance and cultural performances.
+          </p>
+
+
+        </div>
+      </div>
+
+    </div>
+    </div>
+    <div id="empty"></div>
+    <div id="watermark">
+      <div id="ishalaya" class="w3-content w3-container w3-padding-64">
+        <h3 class="w3-center">ISHALAYA - School of Kathak</h3>
+        <h3>
+          <marquee>Admissions open for Aundh, <mark>Pune</mark> Bandra(W) , <mark>Mumbai</mark> for all Levels</marquee>
+        </h3>
+        <!--  <h3><marquee>Ishalaya's Guru Poornima Celebration on 15th July.</marquee></h3> -->
+        <div class="w3-row">
+          <div class="w3-col m6 w3-center w3-section">
+            <br>
+            <iframe width="420" height="345" src="https://www.youtube.com/embed/CkfVg-7F-HE"></iframe>
+          </div>
+          <div class="w3-col m6 w3-center" style="margin-top:70px">
+            <img src="images/grouppic.jpg" style="width:100%" />
+          </div>
+        </div>
+        <div class="w3-row">
+          <div class="w3-col m12 w3-section">
+            <p class="w3-justify">"Ishalaya", School of Kathak - A dance school specifically geared towards introducing,
+              building proficiency and developing talent in the "Kathak" form of Indian classical dance.</p>
+            <p class="w3-justify">Founded in August 2005, The Ishalaya school of Kathak has currently 60 students
+              learning
+              and performing at various levels of competency at Pune branch. Learning from her experience and rigorous
+              training of over 20 years under known Kathak Guru Pandita Maneesha Sathe, Isha Kathavate envisaged
+              Ishalaya
+              as a school that would impart a rigorous, process driven and technically sound education in Kathak to its
+              disciples, which would prepare them to build a career and take to the stage in order to develop a strong,
+              in
+              depth grounding in Kathak. She has a competent staff trained under her guidance who have been conducting
+              elementary and intermediate level batches efficiently at Aundh branch. </p>
+            <p class="w3-center">
+            <h4 style="font-weight:bold;">Performances</h4>
+            </p>
+            <p class="w3-justify">All students of Ishalaya get to perform at institute's concert every alternate year.
+            </p>
+            <p class="w3-justify"> Ishalaya is immensely proud and pleased to have completed it"s 10th anniversary in
+              2015. On this occasion, we at Ishalaya presented "Kathak Vilas", a home production conceptualised and
+              choreographed by Isha Kathavate. Apart from Isha"s solo presentation and performances by her disciples,
+              the
+              highlight of the programme was a performance by her honourable Guru Pandita Mrs Maneesha Sathe in the
+              latter
+              half of the concert.</p>
+            <p class="w3-justify">Apart from the institute's concerts, like Kathak Vilas and Kathak Vividha, Ishalaya's
+              Performing unit has performed at: </p>
+            <p>Shri swami samarth foundation, Aundh , Pune</p>
+            <p> Sanskriti Arts Festival, Thane 2017 </p>
+            <p>Girnar Festival , Junagadh 2016</p>
+            <p> performed and telecast on Doordarshan Prasar Bharati, Delhi for ABU screening of AIDF Festival -2016</p>
+            <p class="w3-center">
+            <h4 style="font-weight:bold;">Competitions</h4>
+            </p>
+            <p class="w3-justify">Leheja Art Foundation, Dombivli</p>
+            <p class="w3-justify">Lots of students have won prizes at prestigous competitions like: </p>
+            <p>Tilak Maharashtra Vidyapeeth, Pune</p>
+            <p> Pt. vishnu digambar Paluskar award, Mumbai </p>Devgiri Kala Manch, Chinchwad</p>
+            <p> Artitude, Akhil Bhartiya Sanskrutik Sangh, Pune </p>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div id="choreography" class="choreography">
+        <div>
+          <br />
+          <br />
+          <h1 class="w3-center">CHOREOGRAPHIES</h1>
+          <br />
+          <br />
+          <br />
+          <br />
+          <div class="w3-row" style="position: relative;">
+            <div id="small-image1" class="w3-col m6 w3-center w3-section">
+              <img src="images/kau_8564.jpg" style="width:100%">
+            </div>
+            <div class="w3-col m6 w3-center w3-section">
+              <div class="w3-col m12 w3-section">
+                <h4 style="font-weight:bold;">Spanda : a meditative pulse</h4>
+                <p id="sacred-h3">This choreographic piece is an ode to one of the sacred symbols in Hinduism, 'Sri
+                  Yantra'.
+                  A concept ideated
+                  by known Bharatnatyam Guru Lata Surendra ji, Isha's visual delineation draws parallels between the two
+                  forms:
+                  the meditative tool Sri Yantra and Kathak..</p>
+              </div>
+            </div>
+          </div>
+          <div class="w3-row" style="position: relative;">
+            <div class="w3-col m6 w3-center w3-section">
+              <div class="w3-col m12 w3-section">
+                <h4 style="font-weight:bold;">Emergence ..... where fear ends</h4>
+                <p id="sacred-h3">
+                  A Proverb based choreographic production, again conceptualised by Guru Shama Bhate. Isha ‘s
+                  delineation
+                  of the proverb was well received and constructively appreciated by the audience as well as the
+                  panellists which consisted of stalwarts from different fields: Guru Aditi Mangaldas, Nandita Wagle,
+                  Sushant Jadhav, Kaushal Inamdar, Radhika Ingle and Vaibhav Arekar.</p>
+              </div>
+            </div>
+            <div id="small-image2" class="w3-col m6 w3-center w3-section">
+              <img src="images/kau_4192.jpg" style="width:100%">
+            </div>
+          </div>
+         
+          <div class="w3-row" style="position: relative;">
+			<div id="small-image4" class="w3-col m6 w3-center w3-section">
+              <img src="images/deviabhanga1.jpg" style="width:100%">
+            </div>
+            <div class="w3-col m6 w3-center w3-section">
+              <div class="w3-col m12 w3-section">
+                <h4 style="font-weight:bold;">Devi Abhanga</h4>
+                <p id="sacred-h3">
+                  A traditional composition highlighting the attributes and divinity of devi Ambejogai. A powerful
+                  rendition by known vocalist Reva Natu, the piece depicts the women devotees seeking her blessing to be
+                  as empowered in order to deal with the negativities around.</p>
+              </div>
+            </div>
+          </div>
+          <div class="w3-row" style="position: relative;">
+            <div class="w3-col m6 w3-center w3-section">
+              <div class="w3-col m12 w3-section">
+                <h4 style="font-weight:bold;">The Rose</h4>
+                <p id="sacred-h3">
+                  The Rose - A solo delineation of the poem 'The Rose by Lang Leav, emoting the contrasts of a woman's
+                  soul.
+                  This is an audio-visual production launched on youtube.
+                </p>
+              </div>
+            </div>
+			<div class="w3-col m6 w3-center w3-section">
+              <!-- <iframe src="https://www.youtube.com/embed/7VIROfKLx6c"></iframe> -->
+              <iframe width="420" height="345" src="https://www.youtube.com/embed/uxEbzo-UXjc"></iframe>
+            </div>
+		  </div>
+          <div class="w3-row" style="position: relative;">
+            <div class="w3-col m6 w3-center w3-section">
+              <div class="w3-col m12 w3-section">
+                <iframe width="420" height="345" src="https://www.youtube.com/embed/7VIROfKLx6c"></iframe>
+              </div>
+            </div>
+			<div class="w3-col m6 w3-center w3-section">
+
+              <h4 style="font-weight:bold;">Rudra Taal</h4>
+              <p id="sacred-h3">
+                <!-- The Rose - A solo delineation of the poem 'The Rose by Lang Leav, emoting the contrasts of a woman's soul. This is an audio-visual production launched on youtube. -->
+              </p>
+            </div>
+            
+          </div>
+
+
+        </div>
+        <!-- <div class="w3-row-padding w3-center">
+        <div class="w3-col m3">
+          <h3 class="w3-center">A sacred geometry: Sri Yantra</h3>
+          This choreographic piece is an ode to one of the sacred symbols in Hinduism, ‘Sri Yantra’. A concept ideated
+          by known Bharatnatyam Guru Lata Surendra ji, Isha’s visual delineation draws parallels between the two forms:
+          the meditative tool Sri Yantra and Kathak.
+        </div>
+        <div class="w3-col m3">
+          <h3 class="w3-center">Devi Abhanga</h3>
+          A traditional composition highlighting the attributes and divinity of devi Ambejogai. A powerful rendition by
+          known vocalist Reva Natu, the piece depicts the women devotees seeking her blessing to be as empowered in
+          order to deal with the negativities around.
+        </div>
+        <div class="w3-col m3">
+          <h3 class="w3-center">The Elusive</h3>
+          As a part of the Choreography Masterclass by Guru Shama Bhate organised by Maharashtra cultural centre Pune,
+          Isha chose the concept of Mirage and built it upon life’s desires which remain eternally elusive.
+
+          A Proverb based choreographic production, again conceptualised by Guru Shama Bhate. Isha ‘s delineation of the
+          proverb was well received and constructively appreciated by the audience as well as the panellists which
+          consisted of stalwarts from different fields: Guru Aditi Mangaldas, Nandita Wagle, Sushant Jadhav, Kaushal
+          Inamdar, Radhika Ingle and Vaibhav Arekar.
+        </div>
+        <div class="w3-col m3">
+          <h3 class="w3-center">The Rose</h3>
+          A solo delineation of the poem ‘The Rose by Lang Leav, emoting the contrasts of a woman’s soul. This is an
+          audio-visual production launched on youtube.
+        </div>
+      </div> -->
+
+        <div id="hideme3" class="w3-content w3-black" style="max-width:1800px;margin-top:46px">
+          <div class="mySlides3 w3-animate-fading">
+            <img src="images/12july_mcc.jpg" style="width:100%">
+          </div>
+        </div>
+        <div id="hideme4" class="w3-content w3-black" style="max-width:1800px;margin-top:46px">
+          <div class="mySlides4 w3-animate-fading">
+            <img src="images/deviabhanga1.jpg" style="width:100%">
+          </div>
+          <div class="mySlides4 w3-animate-fading">
+            <img src="images/deviabhanga2.jpg" style="width:100%">
+          </div>
+          <div class="mySlides4 w3-animate-fading">
+            <img src="images/deviabhanga3.jpg" style="width:100%">
+          </div>
+          <div class="mySlides4 w3-animate-fading">
+            <img src="images/deviabhanga4.jpg" style="width:100%">
+          </div>
+        </div>
+        <div id="hideme1" class="w3-content w3-black" style="max-width:1800px;margin-top:46px">
+          <div class="mySlides1 w3-animate-fading">
+            <img src="images/kau_8587.jpg" style="width:100%">
+          </div>
+          <div class="mySlides1 w3-animate-fading">
+            <img src="images/kau_8564.jpg" style="width:100%">
+          </div>
+        </div>
+        <div id="hideme2" class="w3-content w3-black" style="max-width:1800px;margin-top:46px">
+          <div class="mySlides2 w3-animate-fading">
+            <img src="images/kau_4192.jpg" style="width:100%">
+          </div>
+          <div class="mySlides2 w3-animate-fading">
+            <img src="images/kau_4114.jpg" style="width:100%">
+          </div>
+          <div class="mySlides2 w3-animate-fading">
+            <img src="images/kau_4227.jpg" style="width:100%">
+          </div>
+          <div class="mySlides2 w3-animate-fading">
+            <img src="images/kau_4428.jpg" style="width:100%">
+          </div>
+        </div>
+        <!-- <div class="w3-row-padding w3-center">
+        <div class="w3-col m3">
+          <img src="images/kau_8564.jpg" style="width:100%" onclick="onClick(this)">
+        </div>
+        <div class="w3-col m3">
+          <img src="images/kau_8587.jpg" style="width:100%" onclick="onClick(this)">
+        </div>
+        <div class="w3-col m3">
+          <img src="images/kau_8638.jpg" style="width:100%" onclick="onClick(this)">
+        </div>
+        <div class="w3-col m3">
+          <img src="images/12july_mcc.jpg" style="width:100%" onclick="onClick(this)">
+        </div>
+      </div> -->
+        <!-- <div class="w3-row-padding w3-center">
+        <div class="w3-col m3">
+          <img src="images/kau_4114.jpg" style="width:100%" onclick="onClick(this)">
+        </div>
+        <div class="w3-col m3">
+          <img src="images/kau_4192.jpg" style="width:100%" onclick="onClick(this)">
+        </div>
+        <div class="w3-col m3">
+          <img src="images/kau_4227.jpg" style="width:100%" onclick="onClick(this)">
+        </div>
+        <div class="w3-col m3">
+          <img src="images/kau_4428.jpg" style="width:100%" onclick="onClick(this)">
+        </div>
+      </div> -->
+
+      </div>
+    </div>
+
+
+    <!-- <div id="gallery" class="w3-content w3-container w3-padding-64"> -->
+    <!-- <h3 class="w3-center">GALLERY</h3>
+      <p class="w3-center"><em>Click on the images to make them bigger</em></p><br>
+
+      <div class="w3-row-padding w3-center">
+        <div class="w3-col m3">
+          <img src="images/img_p1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+        </div>
+
+        <div class="w3-col m3">
+          <img src="images/img_p2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+        </div>
+
+        <div class="w3-col m3">
+          <img src="images/img_p3.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+        </div>
+
+        <div class="w3-col m3">
+          <img src="images/img_p4.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+        </div>
+      </div>
+
+      <div class="w3-row-padding w3-center w3-section">
+        <div class="w3-col m3">
+          <img src="images/img_p5.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+        </div>
+
+        <div class="w3-col m3">
+          <img src="images/img_p6.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+        </div>
+
+        <div class="w3-col m3">
+          <img src="images/img_p7.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+        </div>
+        <div class="w3-col m3">
+          <img src="images/img_p8.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+        </div>
+      </div> -->
+
+    <!-- <div class="w3-row-padding w3-center w3-section">
+        <div class="w3-col m6" style="max-width: 100%; height: auto;">
+          <iframe src="https://www.youtube.com/embed/7VIROfKLx6c">
+        </div>
+        <div class="w3-col m6" style="max-width: 100%; height: auto;">
+          <iframe src="https://www.youtube.com/embed/uxEbzo-UXjc">
+        </div>
+      </div>
+
+    </div>   -->
+
+
+    <div id="contact" class="w3-container w3-center w3-padding-64">
+      <h2 class="w3-wide w3-center">CONTACT US</h2>
+      <div class="w3-container w3-center  w3-black">
+        <a target="_blank" title="follow me on facebook" href="https://www.facebook.com/Ishaalaya/"><img
+            style="width:40px;margin:5px;border:2px solid white;color: #fff !important;" alt="Follow us on Facebook"
+            src="images/facebook.png" border=0></a>
+        <a target="_blank" title="follow me on Instagram" href="https://www.instagram.com/ishalaya_kathak/"><img
+            style="margin:5px;width:40px;color: #fff !important;" alt="Follow us on Facebook" src="images/instagram.jpg"
+            border=0></a>
+        <a target="_blank" title="Follow and Subscribe" href="https://www.youtube.com/user/ishakathavate"><img
+            style="margin:5px;width:40px;color: #fff !important;" alt="Follow and Subscribe" src="images/youtube.png"
+            border=0></a>
+      </div>
+
+      <div class="w3-row w3-padding-32 w3-content" style="color:white;">
+        <div class="w3-col s6 m6 l6">
+          <div class="w3-center">
+            <i class="fa fa-envelope" style="width:20px"> </i> Email:
+            <span style="direction: rtl; unicode-bidi: bidi-override;">moc.liamg@etavahktak.ahsi</span>
+        </div>
+        </div>
+        <div class="w3-col s6 m6 l6">
+          <div class="w3-center">
+            <span><a href="https://wa.me/9923284309" target="_blank">
+                <img src="images/WhatsApp_icon.png" alt="WhatsApp" style="width: 20px; height: 20px;"> &nbsp;WhatsApp us
+                for
+                class enquiries
+              </a></span>
+          </div>
+        </div>
+      </div>
+      <br />
+
+      <div class="w3-row w3-content">
+        <div class="w3-col s4 m4 l4">
+          <div><iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.4204136930503!2d73.8035883!3d18.5550756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf3aa82ffe5b%3A0x52d43fce34e31092!2sIshalaya%20Kathak%20Dance%20School!5e0!3m2!1sen!2sin!4v1757229378389!5m2!1sen!2sin"
+              style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div>
+            <span>Pune Branch</span>
+          </div>
+        </div>
+        <div class="w3-col s4 m4 l4">
+          <div><iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.2364018806375!2d72.82839899999999!3d19.05334600000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c93f66c0cfcb%3A0x7eb5c88025958c07!2s)!5e0!3m2!1sen!2sin!4v1757337256924!5m2!1sen!2sin"
+              style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div>
+            <span>Mumbai Branch</span>
+          </div>
+        </div>
+        <div class="w3-col s4 m4 l4">
+          <form method="POST" id="myForm" action="https://formspree.io/f/mbdbblva">
+            <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+              <div class="w3-half">
+                <input name="name" class="w3-input w3-border" type="text" placeholder="Name" />
+              </div>
+              <div class="w3-half">
+                <input name="email" class="w3-input w3-border" type="email" placeholder="Email" />
+              </div>
+            </div>
+
+            <textarea name="message" placeholder="Message"></textarea>
+            <div id="user-input" class="inline">
+              <input type="text" id="captcha-input" placeholder="Captcha code" />
+            </div>
+
+            <div class="inline" onclick="generate()">
+              <i class="fas fa-sync"></i>
+            </div>
+
+            <div id="image" class="inline" selectable="False">
+            </div>
+            <button id="btn" onclick="printmsg(event)">Submit</button>
+            <p id="key"></p>
+          </form>
+
+
+
+        </div>
+      </div>
+
+
+    </div>
+    <!-- Add Google Maps -->
+    <!-- <div id="googleMap" style="height:400px;filter:grayscale(90%);-webkit-filter:grayscale(90%);"></div> 
+<script src="https://maps.googleapis.com/maps/api/js"></script> -->
+    <script>
+
+      const smallImage1 = document.getElementById('small-image1');
+      const smallImage2 = document.getElementById('small-image2');
+      // const smallImage3 = document.getElementById('small-image3');
+      const smallImage4 = document.getElementById('small-image4');
+      const fullSizeImage1 = document.getElementById('hideme1');
+      const fullSizeImage2 = document.getElementById('hideme2');
+      const fullSizeImage3 = document.getElementById('hideme3');
+      const fullSizeImage4 = document.getElementById('hideme4');
+
+      smallImage1.addEventListener('click', function () {
+        smallImage1.style.display = 'none';
+        fullSizeImage1.style.display = 'block';
+        fullSizeImage1.scrollIntoView();
+      });
+      smallImage2.addEventListener('click', function () {
+        smallImage2.style.display = 'none';
+        fullSizeImage2.style.display = 'block';
+        fullSizeImage2.scrollIntoView();
+      });
+      // smallImage3.addEventListener('click', function () {
+      //   smallImage3.style.display = 'none';
+      //   fullSizeImage3.style.display = 'block';
+      //   fullSizeImage3.scrollIntoView();
+      // });
+      smallImage4.addEventListener('click', function () {
+        smallImage4.style.display = 'none';
+        fullSizeImage4.style.display = 'block';
+        fullSizeImage4.scrollIntoView();
+      });
+
+      fullSizeImage1.addEventListener('click', () => {
+        fullSizeImage1.style.display = 'none';
+        smallImage1.style.display = 'block';
+        smallImage1.scrollIntoView();
+      });
+      fullSizeImage2.addEventListener('click', () => {
+        fullSizeImage2.style.display = 'none';
+        smallImage2.style.display = 'block';
+        smallImage2.scrollIntoView();
+      });
+      fullSizeImage3.addEventListener('click', () => {
+        fullSizeImage3.style.display = 'none';
+        smallImage3.style.display = 'block';
+        smallImage3.scrollIntoView();
+      });
+      fullSizeImage4.addEventListener('click', () => {
+        fullSizeImage4.style.display = 'none';
+        smallImage4.style.display = 'block';
+        smallImage4.scrollIntoView();
+      });
+
+
+      //var myCenter = new google.maps.LatLng(41.878114, -87.629798);
+      function onClick(element) {
+        document.getElementById("img01").src = element.src;
+        document.getElementById("modal01").style.display = "block";
+      }
+
+      function initialize() {
+        var mapProp = {
+          center: myCenter,
+          zoom: 12,
+          scrollwheel: false,
+          draggable: false,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+
+        var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+
+        var marker = new google.maps.Marker({
+          position: myCenter,
+        });
+
+        marker.setMap(map);
+      }
+
+      //google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+
+    <!-- Footer -->
+    <footer class="w3-container w3-padding-2 w3-center w3-opacity w3-light-grey w3-xlarge">
+      <p class="w3-medium">Created By: Anil Chitte</p>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Add smooth scrolling to all links
+        // Get the button element
+        const scrollToTopBtn = document.getElementById('scroll-to-top');
+
+        // Add a scroll event listener to the window
+        window.addEventListener('scroll', () => {
+          // Check if the user has scrolled down more than 300 pixels
+          if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            scrollToTopBtn.style.display = 'block';
+          } else {
+            scrollToTopBtn.style.display = 'none';
+          }
+        });
+
+        // Add an event listener to the button to handle smooth scrolling (optional)
+        scrollToTopBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        });
+        $("a").on('click', function (event) {
+
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 1600, function () {
+
+              // Add hash (#) to URL when done scrolling (default click behavior)
+              window.location.hash = hash;
+            });
+          } // End if
+        });
+      });
+      // Automatic Slideshow - change image every 4 seconds
+      var myIndex = 0;
+      carousel();
+
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) { myIndex = 1 }
+        x[myIndex - 1].style.display = "block";
+        setTimeout(carousel, 6000);
+      }
+
+      var myIndex1 = 0;
+      carousel1();
+
+      function carousel1() {
+        var j;
+        var y = document.getElementsByClassName("mySlides1");
+        for (j = 0; j < y.length; j++) {
+          y[j].style.display = "none";
+        }
+        myIndex1++;
+        if (myIndex1 > y.length) {
+          myIndex1 = 1
+        }
+        y[myIndex1 - 1].style.display = "block";
+        setTimeout(carousel1, 6000);
+      }
+
+      var myIndex2 = 0;
+      carousel2();
+
+      function carousel2() {
+        var k;
+        var z = document.getElementsByClassName("mySlides2");
+        for (k = 0; k < z.length; k++) {
+          z[k].style.display = "none";
+        }
+        myIndex2++;
+        if (myIndex2 > z.length) {
+          myIndex2 = 1
+        }
+        z[myIndex2 - 1].style.display = "block";
+        setTimeout(carousel2, 6000);
+      }
+
+      var myIndex4 = 0;
+      carousel4();
+
+      function carousel4() {
+        var l;
+        var az = document.getElementsByClassName("mySlides4");
+        for (l = 0; l < az.length; l++) {
+          az[l].style.display = "none";
+        }
+        myIndex4++;
+        if (myIndex4 > az.length) {
+          myIndex4 = 1
+        }
+        az[myIndex4 - 1].style.display = "block";
+        setTimeout(carousel4, 6000);
+      }
+
+      // Used to toggle the menu on small screens when clicking on the menu button
+      function myFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else {
+          x.className = x.className.replace("w3-show", "");
+        }
+      }
+
+      // When the user clicks anywhere outside of the modal, close it
+      var modal = document.getElementById('ticketModal');
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+    </script>
+
+</body>
+
+</html>
